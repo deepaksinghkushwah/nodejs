@@ -21,7 +21,7 @@ router.get('/list', (req, res, next) => {
     res.render("users-list",{title: "All Users", path: '/users/list', users: users});
 });
 
-module.exports = {
+module.exports = { 
     routes: router,
     users: users
 }
