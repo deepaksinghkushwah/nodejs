@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('includes/head.ejs')%>
+</head>
+
+<body>
+    <div class="container card bg-info">
+        <%- include('includes/nav.ejs')%>
+        <div class="mainContent">
+            <h1>All Users</h1>
+            <% if(users.length > 0) { %>
+                <ul>
+                <% for (let user  of users) { %>
+                    <li><%=user %></li>
+                <% } %>
+            </ul>
+            <% } %>
+        </div>
+    </div>
+    <%- include('includes/end.ejs')%>
+</body>
+
+</html>

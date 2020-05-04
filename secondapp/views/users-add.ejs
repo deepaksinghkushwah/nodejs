@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('includes/head.ejs')%>
+</head>
+
+<body>
+    <div class="container card bg-info">
+        <%- include('includes/nav.ejs')%>
+        <div class="mainContent">
+            <h1>Add Users</h1>
+            <form action="/users/add" method="post">
+                <input type="text" name="title">
+                <input type="submit" value="Add User">
+            </form>
+        </div>
+    </div>
+    <%- include('includes/end.ejs')%>
+</body>
+
+</html>
+
