@@ -1,27 +1,18 @@
 const express = require("express");
-const path = require("path");
 const router = express.Router();
-const rootDir = require("../utils/path");
+const userController = require("../controllers/users");
 
-const users = [];
+
 
 // process form
-router.post('/add', (req, res, next) => {
-    users.push(req.body.title);
-    res.redirect("list");
-});
+router.post('/add', userController.postAddUser);
 
 // render form
-router.get('/add', (req, res, next) => {
-    res.render("users-add",{title: "Add User", path: '/users/add'});
-});
+router.get('/add',userController.getAddUserForm);
 
 // list all users
-router.get('/list', (req, res, next) => {
-    res.render("users-list",{title: "All Users", path: '/users/list', users: users});
-});
+router.get('/list', userController.listUsers);
 
 module.exports = { 
-    routes: router,
-    users: users
+    routes: router,    
 }

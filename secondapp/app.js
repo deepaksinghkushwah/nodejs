@@ -1,8 +1,7 @@
 const http = require("http");
 const bodyParser = require("body-parser");
 const path = require("path");
-const rootDir = require("./utils/path");
-
+const errorController = require("./controllers/error");
 
 
 const express = require("express");
@@ -21,9 +20,7 @@ app.use('/admin', adminRoutes.routes);
 app.use(shopRoutes);
 app.use("/users",userRoutes.routes);
 
-app.use((req, res, next) => {
-    res.status(404).render('404',{title: "404 Page not found",path: ''});
-});
+app.use(errorController.get404Page);
 
 const server = http.createServer(app);
 server.listen(3000);
