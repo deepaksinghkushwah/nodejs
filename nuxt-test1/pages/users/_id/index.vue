@@ -1,5 +1,5 @@
 <template>
-    <h1>Single user with id: {{ $route.params.id }}</h1>
+    <p>Single user with id: {{ $route.params.id }}</p>
 </template>
 <script>
 export default {
