@@ -1,7 +1,7 @@
 <template>
     <div class="single-post-page">
         <section class="post">
-            <h1 class="post-title">Title of post</h1>
+            <h1 class="post-title">Title of post: ID={{ $route.params.id }}</h1>
             <div class="post-details">
                 <div>Last updated on xxx</div>
                 <div>Written by</div>

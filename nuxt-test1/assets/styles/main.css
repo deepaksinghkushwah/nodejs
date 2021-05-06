@@ -1,3 +1,9 @@
-html, body{
-    margin: 0px;
+html,
+body {
+  margin: 0px;
+  /*font-family: "Open Sans", sans-serif;*/
+  font-family: 'Overpass', sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: 1.2em;
 }
