@@ -14,8 +14,3 @@ export default{
     }
 }
 </script>
-<style scoped>
-.mainDiv{
-    margin-top: 50px;;
-    }
-</style>

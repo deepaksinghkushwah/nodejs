@@ -1,10 +1,16 @@
 <template>
   <div class="container mainDiv">
+    <Header/>
     <Nuxt />
   </div>
 </template>
 <script>
 import 'bootstrap/dist/css/bootstrap.css';
-export default{}
+import Header from '~/components/Header.vue';
+export default{
+  components: {
+    Header,
+    }
+}
 </script>
 
