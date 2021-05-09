@@ -7,7 +7,7 @@
 </template>
 <script>
 import 'bootstrap/dist/css/bootstrap.css';
-import Header from '~/components/Header.vue';
+import Header from '~/components/navigation/Header.vue';
 export default{
   components: {
     Header,

@@ -1,7 +1,7 @@
 <template>
-  <div class="row row-cols-3 align-items-center">
+    <div class="row">
     <div
-      class="col"
+      class="col-lg-12"
       v-for="post in posts"
       :key="post.id"
       :to="{ path: '/posts/' + post.id }"
@@ -25,7 +25,7 @@
 </template>
 <script>
 export default {
-  name: "PostPreview",
+  name: "PostList",
   props: {
     posts: {
       id: { type: Number, require: true },
@@ -37,3 +37,12 @@ export default {
   },
 };
 </script>
+<style scoped>
+.card {
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.card img {
+  width: 30%;
+}
+</style>
